@@ -148,8 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 warning.className = 'region-warning';
                 warning.innerHTML = `
                     <div class="warning-content">
-                        <p>Performance Plans are only available for North America. Please select a different plan or 
-                        <a href="https://discord.gg/s4MZumySeP" target="_blank">contact support</a> for assistance.</p>
+                        <p>Performance Plans are only available for North America.</p>
                     </div>
                 `;
                 document.querySelector('.currency-billing-options').insertAdjacentElement('afterend', warning);
