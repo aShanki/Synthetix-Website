@@ -332,6 +332,11 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 250px; /* Add minimum height to ensure consistent sizing */
 }
 
 .testimonial:hover {
@@ -340,12 +345,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonial p {
     font-style: italic;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    flex-grow: 1; /* Allow text to expand */
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0;
+    margin: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: var(--primary);
 }
 
 .testimonial h4 {
     color: var(--primary);
     font-weight: bold;
+    margin-top: auto; /* Push names to bottom */
+    align-self: center; /* Center horizontally */
 }
 
 /* Pricing Plans Section */
@@ -1319,4 +1342,24 @@ footer {
 
 .social-media i:hover {
     color: #4CAF50;
+}
+
+.more-text {
+    display: none;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);  /* Changed to a grey color */
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.25rem 0;  /* Reduced padding */
+    transition: color 0.3s ease;
+    margin: 0.25rem 0 0.75rem;  /* Added margin to position between text and name */
+    display: block;
+}
+
+.read-more-btn:hover {
+    color: var(--primary);
 }
