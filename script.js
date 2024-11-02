@@ -140,6 +140,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const showMoreBtn = document.querySelector('.show-more-btn');
     const showLessBtn = document.querySelector('.show-less-btn');
 
+    // Initial setup: Hide all grids except the active one and hide plans beyond the first 4
+    document.querySelectorAll('.plans-grid').forEach(grid => {
+        const isActive = grid.dataset.activeCategory === 'budget'; // budget is initially active
+        grid.style.display = isActive ? 'grid' : 'none';
+        
+        if (isActive) {
+            const plans = grid.querySelectorAll('.plan-block');
+
+            // Hide plans beyond the first 4
+            plans.forEach((plan, index) => {
+                if (index >= 4) {
+                    plan.classList.add('hidden');
+                } else {
+                    plan.classList.remove('hidden');
+                }
+            });
+        }
+    });
+
     function updateRegionWarning(category) {
         let regionWarning = document.querySelector('.region-warning');
         if (category === 'performance') {
@@ -297,3 +316,151 @@ document.addEventListener('gesturestart', function(e) {
 });
 
 // Add more JavaScript for price updates and plan toggling
+
+document.getElementById('show-more-btn').addEventListener('click', function() {
+    const hiddenPlans = document.querySelectorAll('.plans-grid .plan-block.hidden');
+    hiddenPlans.forEach(plan => {
+        plan.classList.remove('hidden');
+    });
+    
+    // Update button to "Show Less" if needed
+    this.textContent = 'Show Less';
+    this.id = 'show-less-btn';
+});
+
+// Ensure "Show Less" functionality maintains order
+document.getElementById('show-less-btn').addEventListener('click', function() {
+    const allPlans = document.querySelectorAll('.plans-grid .plan-block');
+    allPlans.forEach((plan, index) => {
+        if (index >= 4) { // Assuming 4 plans are shown by default
+            plan.classList.add('hidden');
+        }
+    });
+    
+    // Update button to "Show More" if needed
+    this.textContent = 'Show More';
+    this.id = 'show-more-btn';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ...existing code for cursor gradient, navbar scroll effect, currency switching...
+
+    // Category Switching
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const showMoreBtn = document.querySelector('.show-more-btn');
+    const showLessBtn = document.querySelector('.show-less-btn');
+
+    // Initial setup: Display only the active category and hide plans beyond the first 4
+    document.querySelectorAll('.plans-grid').forEach(grid => {
+        const isActive = grid.dataset.activeCategory === 'budget'; // 'budget' is initially active
+        grid.style.display = isActive ? 'grid' : 'none';
+
+        if (isActive) {
+            const plans = grid.querySelectorAll('.plan-block');
+
+            // Hide plans beyond the first 4
+            plans.forEach((plan, index) => {
+                plan.classList.toggle('hidden', index >= 4);
+            });
+        }
+    });
+
+    function updateRegionWarning(category) {
+        let regionWarning = document.querySelector('.region-warning');
+        if (category === 'performance') {
+            if (!regionWarning) {
+                const warning = document.createElement('div');
+                warning.className = 'region-warning';
+                warning.innerHTML = `
+                    <div class="warning-content">
+                        <p>Performance Plans are only available for North America.</p>
+                    </div>
+                `;
+                document.querySelector('.currency-billing-options').insertAdjacentElement('afterend', warning);
+                regionWarning = warning;
+            }
+            regionWarning.style.display = 'block';
+        } else if (regionWarning) {
+            regionWarning.style.display = 'none';
+        }
+    }
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            document.querySelector('.category-btn.active').classList.remove('active');
+            btn.classList.add('active');
+
+            // Show selected category's grid and hide others
+            const selectedCategory = btn.dataset.category;
+            document.querySelectorAll('.plans-grid').forEach(grid => {
+                const isSelectedCategory = grid.dataset.activeCategory === selectedCategory;
+                grid.style.display = isSelectedCategory ? 'grid' : 'none';
+
+                if (isSelectedCategory) {
+                    // Reset plan visibility for the selected category
+                    const plans = grid.querySelectorAll('.plan-block');
+                    plans.forEach((plan, index) => {
+                        plan.classList.toggle('hidden', index >= 4);
+                    });
+                }
+            });
+
+            // Update region warning
+            updateRegionWarning(selectedCategory);
+
+            // Reset show more/less buttons
+            updateShowMoreButtonVisibility();
+        });
+    });
+
+    // Show More/Less Plans
+    showMoreBtn.addEventListener('click', () => {
+        togglePlans(true);
+    });
+
+    showLessBtn.addEventListener('click', () => {
+        togglePlans(false);
+    });
+
+    function togglePlans(showMore) {
+        const activeCategory = document.querySelector('.category-btn.active').dataset.category;
+        const plansGrid = document.querySelector(`.plans-grid[data-active-category="${activeCategory}"]`);
+        const plans = plansGrid.querySelectorAll('.plan-block');
+
+        plans.forEach((plan, index) => {
+            if (index >= 4) {
+                plan.classList.toggle('hidden', !showMore);
+            }
+        });
+
+        // Update button visibility
+        showMoreBtn.style.display = showMore ? 'none' : 'block';
+        showLessBtn.style.display = showMore ? 'block' : 'none';
+    }
+
+    function updateShowMoreButtonVisibility() {
+        const activeCategory = document.querySelector('.category-btn.active').dataset.category;
+        const plansGrid = document.querySelector(`.plans-grid[data-active-category="${activeCategory}"]`);
+        const plans = plansGrid.querySelectorAll('.plan-block');
+
+        if (plans.length <= 4) {
+            // Hide both buttons if there are 4 or fewer plans
+            showMoreBtn.style.display = 'none';
+            showLessBtn.style.display = 'none';
+        } else {
+            // Show "Show More" button, hide "Show Less" button
+            showMoreBtn.style.display = 'block';
+            showLessBtn.style.display = 'none';
+        }
+    }
+
+    // Initial warning and button visibility check
+    updateRegionWarning('budget');
+    updateShowMoreButtonVisibility();
+
+    // ...existing code for mobile menu toggle, read more functionality, etc...
+});
+
+// Remove any redundant event listeners or conflicting code
+// ...rest of the existing code...

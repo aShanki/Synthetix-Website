@@ -584,6 +584,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
 }
 
+/* Hide plans by default beyond the first four */
+.plans-grid .plan-block.hidden {
+    display: none;
+}
+
 .plan-block.hidden {
     display: none;
 }
@@ -1039,6 +1044,18 @@ footer {
     .plan-card:hover,
     .category-btn:hover {
         transform: none;
+    }
+
+    /* Ensure plans are displayed in order on mobile */
+    .plans-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Remove any order properties if present */
+    .plans-grid .plan-block {
+        order: initial;
     }
 }
 
