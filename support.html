@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    // ...same head as index.html...
+    <meta charset="UTF-8">
+    <meta name="description" content="Synthetix Hosting - Customer Support and Help Center">
+    <meta name="keywords" content="Minecraft Hosting Support, Server Help, Technical Support">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://cdn.synthetix.host/synthetixlogov2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Support - Synthetix Hosting</title>
 </head>
 <body>
     <div id="cursor-gradient"></div>
+    
     <!-- Navigation Bar -->
-    // ...same navbar as index.html...
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn.synthetix.host/synthetixlogov2-removebg-preview.png" alt="Synthetix Hosting Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="plans.html">Hosting Plans</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="https://panel.synthetix.host">Panel</a></li>
+            <li><a href="https://billing.synthetix.host">Billing</a></li>
+        </ul>
+    </nav>
 
     <!-- Support Hero -->
     <section class="hero support-hero">
         <div class="hero-content">
-            <h1>Support Center</h1>
-            <p>Get help with your Minecraft server</p>
-            <a href="https://discord.gg/synthetix" class="btn">Join Our Discord</a>
+            <h1>Premium Customer Support</h1>
+            <p>We're here to help you every step of the way</p>
+            <div class="hero-cta">
+                <a href="https://discord.gg/s4MZumySeP" class="btn">Join Discord</a>
+            </div>
         </div>
     </section>
 
@@ -24,17 +45,28 @@
         <div class="faq-grid">
             <div class="faq-item">
                 <h3>How do I get started?</h3>
-                <p>Choose a plan, complete checkout, and your server will be instantly set up and ready to use.</p>
+                <p>Choose a plan from our hosting options, complete the checkout process, and your server will be instantly set up and ready to use. You'll receive login credentials via email.</p>
             </div>
             <div class="faq-item">
                 <h3>How do I access my server?</h3>
-                <p>Log in to our control panel at panel.synthetix.host using your client area credentials.</p>
+                <p>Log in to our control panel at <a href="https://panel.synthetix.host">panel.synthetix.host</a> using your client area credentials. From there, you can manage your server, install plugins, and access the console.</p>
             </div>
             <div class="faq-item">
                 <h3>How do I install plugins?</h3>
-                <p>Use our one-click installer in the panel, or manually upload plugins to your server's plugins folder.</p>
+                <p>You manually upload plugins to your server's plugins folder. This is to ensure maximum flexibility and control on the user's end.</p>
             </div>
-            <!-- Add more FAQ items -->
+            <div class="faq-item">
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept PayPal, credit/debit cards, and GCash (for Philippines), UPI, RuPay and GPay (for India) and AliPay or AliPayHK for all other regions. For GCash payments, please contact our support team through Discord.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer refunds?</h3>
+                <p>Yes, we offer a 24-hour money-back guarantee if you're not satisfied with our service. Contact support within this period to process your refund.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What's your uptime guarantee?</h3>
+                <p>We guarantee 99.9% uptime for all our servers. Check our Service Level Agreement (SLA) for detailed information about our uptime commitment.</p>
+            </div>
         </div>
     </section>
 
@@ -43,16 +75,16 @@
         <h2>Get Support</h2>
         <div class="channels-grid">
             <div class="channel-card">
-                <img src="discord-icon.png" alt="Discord">
+                <i class="fab fa-discord"></i>
                 <h3>Discord Support</h3>
-                <p>Get real-time help through our Discord community</p>
+                <p>Get real-time help from our community and support team.</p>
                 <a href="https://discord.gg/synthetix" class="btn">Join Discord</a>
             </div>
             <div class="channel-card">
-                <img src="ticket-icon.png" alt="Tickets">
-                <h3>Support Tickets</h3>
-                <p>Create a ticket for technical assistance</p>
-                <a href="https://billing.synthetix.host/submitticket.php" class="btn">Open Ticket</a>
+                <i class="fas fa-book"></i>
+                <h3>Knowledge Base</h3>
+                <p>Find guides and tutorials for common server management tasks.</p>
+                <a href="knowledgebase/index.html" class="btn">Browse Guides</a>
             </div>
         </div>
     </section>
@@ -75,6 +107,7 @@
             </div>
         </div>
     </footer>
-    // ...same footer as index.html...
+
+    <script src="script.js"></script>
 </body>
 </html>
