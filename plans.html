@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Synthetix Hosting - Minecraft Server Hosting Plans and Pricing">
+    <meta name="keywords" content="Minecraft Hosting, Server Plans, Game Hosting, Minecraft Server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://cdn.synthetix.host/synthetixlogov2.png">
+    <title>Hosting Plans - Synthetix Hosting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="cursor-gradient"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn.synthetix.host/synthetixlogov2-removebg-preview.png" alt="Synthetix Hosting Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="plans.html">Hosting Plans</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="https://panel.synthetix.host">Panel</a></li>
+            <li><a href="https://billing.synthetix.host">Billing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Plans Hero -->
+    <section class="hero plans-hero">
+        <div class="hero-content">
+            <h1>Choose Your Perfect Plan</h1>
+            <p>Scalable solutions for every Minecraft community</p>
+        </div>
+    </section>
+
+    <section class="pricing-selector">
+        <div class="wrapper">
+            <div class="pricing-plan-step">
+                <h3 class="title">Select Plan</h3>
+                <span class="sub">
+                    Choose a plan that fits your needs. Need help? 
+                    <a href="support.html">Contact our support team</a>.
+                </span>
+                <hr>
+            </div>
+
+            <!-- Add Category Switcher -->
+            <div class="category-switcher">
+                <button class="category-btn active" data-category="budget">
+                    <h4>Budget</h4>
+                    <p>Perfect for small communities</p>
+                </button>
+                <button class="category-btn" data-category="budget-plus">
+                    <h4>Budget+</h4>
+                    <p>Balanced performance & value</p>
+                </button>
+                <button class="category-btn" data-category="performance">
+                    <h4>Performance</h4>
+                    <p>Maximum power & features</p>
+                </button>
+            </div>
+
+            <div class="currency-billing-options">
+                <ul class="currency-selector">
+                    <li class="active"><a href="#" data-currency="usd" data-symbol="$">$</a></li>
+                    <li><a href="#" data-currency="php" data-symbol="₱">₱</a></li>
+                    <li><a href="#" data-currency="inr" data-symbol="₹">₹</a></li>
+                </ul>
+                
+                <ul class="billing-period">
+                    <li class="active"><a href="#" data-period="monthly">Billed Monthly</a></li>
+                    <li><a href="#" data-period="quarterly">Billed Quarterly (10% Off)</a></li>
+                </ul>
+            </div>
+
+            <div class="plans-grid" data-active-category="budget">
+                <!-- First 4 plans (visible by default) -->
+                <div class="plan-block budget">
+                    <div class="ram-badge">2GB RAM</div>
+                    <div class="plan-description">Basic servers. Minimum for Minecraft: Java Edition</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="3" data-quarterly-price="8.10">$3 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget">
+                    <div class="ram-badge">4GB RAM</div>
+                    <div class="plan-description">Basic servers, the real minimum.</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="6" data-quarterly-price="16.20">$6 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget recommended">
+                    <div class="ram-badge">6GB RAM</div>
+                    <div class="plan-description">Basic servers & some modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="9" data-quarterly-price="24.30">$9 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget">
+                    <div class="ram-badge">8GB RAM</div>
+                    <div class="plan-description">Advanced servers & larger communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="12" data-quarterly-price="32.40">$12 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+
+                <!-- Hidden plans (revealed by Show More) -->
+                <div class="plan-block budget hidden">
+                    <div class="ram-badge">3GB RAM</div>
+                    <div class="plan-description">Basic servers, made for the smallest communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="4.50" data-quarterly-price="12.15">$4.50 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget hidden">
+                    <div class="ram-badge">5GB RAM</div>
+                    <div class="plan-description">Basic servers with small communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="7.50" data-quarterly-price="20.25">$7.50 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget hidden">
+                    <div class="ram-badge">7GB RAM</div>
+                    <div class="plan-description">Basic servers & more modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="10.50" data-quarterly-price="28.35">$10.50 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget hidden">
+                    <div class="ram-badge">10GB RAM</div>
+                    <div class="plan-description">Advanced servers & the largest communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="15" data-quarterly-price="40.50">$15 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget hidden">
+                    <div class="ram-badge">12GB RAM</div>
+                    <div class="plan-description">Advanced servers & most modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="18" data-quarterly-price="48.60">$18 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget hidden">
+                    <div class="ram-badge">16GB RAM</div>
+                    <div class="plan-description">Advanced servers & nearly all modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="24" data-quarterly-price="64.80">$24 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget hidden">
+                    <div class="ram-badge">20GB RAM</div>
+                    <div class="plan-description">Advanced servers & all modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="30" data-quarterly-price="81">$30 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="plans-grid hidden" data-active-category="budget-plus">
+                <!-- Budget+ Plans -->
+                <div class="plan-block budget-plus">
+                    <div class="ram-badge">4GB RAM</div>
+                    <div class="plan-description">Basic servers, the real minimum.</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="8" data-quarterly-price="24">$8 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget-plus">
+                    <div class="ram-badge">6GB RAM</div>
+                    <div class="plan-description">Basic servers & some modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="12" data-quarterly-price="36">$12 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget-plus recommended">
+                    <div class="ram-badge">8GB RAM</div>
+                    <div class="plan-description">Advanced servers & larger communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="16" data-quarterly-price="48">$16 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget-plus">
+                    <div class="ram-badge">10GB RAM</div>
+                    <div class="plan-description">Advanced servers & the largest communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="20" data-quarterly-price="60">$20 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <!-- Additional Budget+ Plans (Hidden by default) -->
+                <div class="plan-block budget-plus hidden">
+                    <div class="ram-badge">12GB RAM</div>
+                    <div class="plan-description">Advanced servers & most modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="24" data-quarterly-price="72">$24 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget-plus hidden">
+                    <div class="ram-badge">16GB RAM</div>
+                    <div class="plan-description">Advanced servers & nearly all modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="32" data-quarterly-price="96">$32 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block budget-plus hidden">
+                    <div class="ram-badge">20GB RAM</div>
+                    <div class="plan-description">Advanced servers & all modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="40" data-quarterly-price="120">$40 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="plans-grid hidden" data-active-category="performance">
+                <!-- Performance Plans -->
+                <div class="plan-block performance">
+                    <div class="ram-badge">4GB RAM</div>
+                    <div class="plan-description">Basic servers, the real minimum.</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="8" data-quarterly-price="24">$8 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block performance">
+                    <div class="ram-badge">6GB RAM</div>
+                    <div class="plan-description">Basic servers & some modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="12" data-quarterly-price="36">$12 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block performance recommended">
+                    <div class="ram-badge">8GB RAM</div>
+                    <div class="plan-description">Advanced servers & larger communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="16" data-quarterly-price="48">$16 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block performance">
+                    <div class="ram-badge">10GB RAM</div>
+                    <div class="plan-description">Advanced servers & the largest communities</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="20" data-quarterly-price="60">$20 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block performance">
+                    <div class="ram-badge">12GB RAM</div>
+                    <div class="plan-description">Advanced servers & most modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="24" data-quarterly-price="72">$24 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block performance">
+                    <div class="ram-badge">16GB RAM</div>
+                    <div class="plan-description">Advanced servers & nearly all modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="32" data-quarterly-price="96">$32 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+                <div class="plan-block performance">
+                    <div class="ram-badge">20GB RAM</div>
+                    <div class="plan-description">Advanced servers & all modpacks</div>
+                    <div class="price-info">
+                        <div class="promo-price" data-monthly-price="40" data-quarterly-price="120">$40 / Month</div>
+                    </div>
+                    <a href="https://billing.synthetix.host" class="btn">Order Now</a>
+                </div>
+            </div>
+
+            <button class="show-more-btn">Show More Plans</button>
+            <button class="show-less-btn">Show Less Plans</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Synthetix Hosting. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#"><img src="https://lh6.googleusercontent.com/aTwPL0UMolD0KAtEz3Xhz8XFKd4HW9rBrecnj92HRF2DA6l-VVWJhSlxhGf0GfJKIcXoQMhYzqX0N1aJ2JPd4NnnbMbiwvBda4VjO-FS0Mw" alt="YouTube"></a>
+                <a href="#"><img src="https://lh6.googleusercontent.com/-i94Pr8Br7Xvl_HHjTsCWO7lOVj1OFMEeP4L53fjegqJaixP8ONYB7pkK5VRpJRK0RDaTLZ-o7odEIT2SCIG8KuChNn1PqEQI3WAVDUdlx0" alt="Instagram"></a>
+                <a href="#"><img src="https://lh5.googleusercontent.com/0TuYWNQPJhbbDBlAJty_UoTWB7ck7pBKhXQeLJDfoTR1_SgZTXI8H9gEEVd4bR_g5gO6TF6pMWkvo8OfBKxi85O9eHQAg60R5sheDVIHEiM" alt="Discord"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>  
