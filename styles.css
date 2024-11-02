@@ -1298,3 +1298,18 @@ footer {
 .legal-content .disclaimer {
     margin-bottom: 3rem;
 }
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media i {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-media i:hover {
+    color: #4CAF50;
+}
