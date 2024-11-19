@@ -1863,6 +1863,31 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 122, 255, 0.2);
 }
 
+.construction-cta .btn-discord {
+    background: #5865F2;
+    border-color: #5865F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.construction-cta .btn-discord:hover {
+    background: #4752c4;
+    border-color: #4752c4;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(88, 101, 242, 0.2);
+}
+
+.construction-cta .btn-discord i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.construction-cta .btn-discord:hover i {
+    transform: translate(2px, -2px);
+}
+
 @keyframes wrench {
     0% { transform: rotate(0deg); }
     20% { transform: rotate(30deg); }
