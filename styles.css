@@ -1843,6 +1843,26 @@ footer {
     margin-top: 2rem;
 }
 
+/* Construction CTA Button Fixes */
+.construction-cta .btn {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.construction-cta .btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.2);
+}
+
 @keyframes wrench {
     0% { transform: rotate(0deg); }
     20% { transform: rotate(30deg); }
