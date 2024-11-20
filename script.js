@@ -462,5 +462,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // ...existing code for mobile menu toggle, read more functionality, etc...
 });
 
+// Out of Stock Servers Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const showOutOfStockBtn = document.querySelector('.show-out-of-stock');
+    const hideOutOfStockBtn = document.querySelector('.hide-out-of-stock');
+    const outOfStockServers = document.querySelector('.out-of-stock-servers');
+
+    if (showOutOfStockBtn && hideOutOfStockBtn && outOfStockServers) {
+        showOutOfStockBtn.addEventListener('click', () => {
+            outOfStockServers.style.display = 'flex';
+            outOfStockServers.style.flexDirection = 'column';
+            outOfStockServers.style.gap = '20px';
+            showOutOfStockBtn.style.display = 'none';
+            hideOutOfStockBtn.style.display = 'inline-block';
+            console.log('Showing out of stock servers'); // Debug log
+        });
+
+        hideOutOfStockBtn.addEventListener('click', () => {
+            outOfStockServers.style.display = 'none';
+            showOutOfStockBtn.style.display = 'inline-block';
+            hideOutOfStockBtn.style.display = 'none';
+            console.log('Hiding out of stock servers'); // Debug log
+        });
+    }
+});
+
 // Remove any redundant event listeners or conflicting code
 // ...rest of the existing code...
