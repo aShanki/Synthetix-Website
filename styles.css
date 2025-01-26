@@ -977,7 +977,7 @@ footer {
         background: linear-gradient(135deg, 
             rgba(0, 0, 0, 0.8) 0%,
             rgba(0, 122, 255, 0.2) 100%),
-            url('https://cdn.synthetix.host/background1.png');
+            url('https://cdn.sear.host/background1.png');
         background-size: 250% auto; /* Zoom in the background */
         background-position: center center; /* Center the background */
         background-repeat: no-repeat;
@@ -1088,7 +1088,7 @@ footer {
 /* Plans Page Specific Styles */
 .plans-hero {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 122, 255, 0.1)),
-                url('https://cdn.synthetix.host/background1.png');
+                url('https://cdn.sear.host/background1.png');
     min-height: 70vh;
     background-size: cover;
     background-position: center;
