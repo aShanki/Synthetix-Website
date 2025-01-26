@@ -81,8 +81,8 @@ let currentPeriod = 'monthly';
 // Currency conversion rates (example rates, update with real rates)
 const exchangeRates = {
     usd: 1,
-    php: 56.50, // 1 USD = 56.50 PHP
-    inr: 83.00  // 1 USD = 83.00 INR
+    php: 58.25,
+    inr: 86.21
 };
 
 function updatePrices() {
